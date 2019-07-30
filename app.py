@@ -12,5 +12,13 @@ def display_student(student_id):
 
 #Create an '/add' route here:
 
+@app.route('/add',methods=['GET','POST'])
+def add_student_route():
+	if request.method == 'GET' :
+		return render_template('add.html', students=query_all())
+	else:
+		print('Recived POST request!')
+		return render_template('add.html', students=query_all())
+	
 if __name__ == '__main__':
     app.run(debug=True)

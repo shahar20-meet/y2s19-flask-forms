@@ -11,7 +11,7 @@
     
     {% for student in students %}
     <p>
-	    Name: <a href="{{url_for('display_student', student_id=student.student_id)}}">{{student.name}}</a><br>
+	    Name: {{student.name}}<br>
 	    Class: {{student.year}}<br>
 	    Finished Lab: {{student.finished_lab}}
     </p>
